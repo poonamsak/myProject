@@ -37,10 +37,8 @@ public class FileOpration {
 		StringBuffer data = new StringBuffer();
 		StringBuffer dataToWrite = new StringBuffer();
 		try (BufferedReader reader = Files.newBufferedReader(path, Charset.forName("UTF-8"))) {
-
 			String currentLine = null;
-			List<String> allLines = Files.readAllLines(path);
-
+			
 			while ((currentLine = reader.readLine()) != null) {// while there is content
 				data.append(currentLine).append("\n");
 				System.out.println(currentLine); // print the current line
